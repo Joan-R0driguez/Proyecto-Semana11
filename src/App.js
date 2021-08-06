@@ -11,41 +11,40 @@ import Footer from './components/Footer';
 import SearchResults from './components/SearchResults';
 import ListCountries from './views/ListCountries';
 
-
 export default function App () {
 
   return(
-    <div>
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/countries">
-            <ListCountries />
-          </Route>
-          <Route path="/searchresults">
-            <SearchResults />
-          </Route>
-          <Route path="/countryitem">
-            <DetailPage />
-          </Route>
-          <Route path="/contact">
-            <ContactPage />
-          </Route>
-          <Route path="/aboutus">
-            <AboutUsPage />
-          </Route>
-          <Route path="/login">
-            <LoginPage />
-          </Route>
-          <Route path="/register">
-            <RegisterPage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
+      <>
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/countries">
+              <ListCountries />
+            </Route>
+            <Route path="/searchresults">
+              <SearchResults />
+            </Route>
+            <Route path="/countryitem">
+              <DetailPage />
+            </Route>
+            <Route path="/contact">
+              <ContactPage />
+            </Route>
+            <Route path="/aboutus">
+              <AboutUsPage />
+            </Route>
+            <Route path="/register">
+              <RegisterPage />
+            </Route>
+            <Route path="/homepage">
+              <HomePage />
+            </Route>
+            <Route path="/">
+              <LoginPage />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </>
   );
 }

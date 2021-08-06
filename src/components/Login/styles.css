@@ -15,25 +15,26 @@
     padding: 10px;
 }
 
-.login-container form{
+.login-container Form{
     width: 70%;
     padding: 20px;
     border-top: 1px dotted black;
 }
 
-.login-container form p{
+.login-container Form p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px dotted black;
 }
 
-.login-container form label{
+.login-container Form label{
     font-size: 18px;
     font-weight: 600;
+    margin-top: 15px;
 }
 
 .login-container input{
-    width: 110%;
     padding: 8px;
     border-radius: 20px;
     margin: 15px;
@@ -47,4 +48,8 @@
     padding: 5px;
     margin-top: 10px;
     border-radius: 30px;
+}
+
+.login-container .button{
+    border-bottom: none;
 }
