@@ -1,20 +1,51 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Login from './components/Login';
-import Register from './components/Register';
-import Search from './components/Search';
+import LoginPage from './views/LoginPage';
+import RegisterPage from './views/RegisterPage';
+import HomePage from './views/Homepage';
+import AboutUsPage from './views/AboutUsPage';
+import ContactPage from './views/ContactPage';
+import DetailPage from './views/DetailPage';
+import Footer from './components/Footer';
+import SearchResults from './components/SearchResults';
+import ListCountries from './views/ListCountries';
 
 
 export default function App () {
+
   return(
-    <>
+    <div>
       <Router>
         <Header />
-        <Search />
-        <Login />
-        <Register />
+        <Switch>
+          <Route path="/countries">
+            <ListCountries />
+          </Route>
+          <Route path="/searchresults">
+            <SearchResults />
+          </Route>
+          <Route path="/countryitem">
+            <DetailPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
+          </Route>
+          <Route path="/aboutus">
+            <AboutUsPage />
+          </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
+          <Route path="/register">
+            <RegisterPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
-    </>
-  )
+    </div>
+  );
 }

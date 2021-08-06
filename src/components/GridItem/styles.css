@@ -1,0 +1,36 @@
+.pais-item{
+    width: 80%;
+    margin: 20px auto;
+    background-color: lightgreen;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pais-item a{
+    width: 100%;
+}
+
+.pais-item img{
+    width: 80%;
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.pais-item h2{
+    font-size: 20px;
+    margin: 5px;
+}
+
+.pais-item h4{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

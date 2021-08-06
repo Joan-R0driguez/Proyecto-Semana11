@@ -1,0 +1,13 @@
+.country-grid{
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 20px;
+    background-color: #4f7c91;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.loading{
+    text-align: center;
+    margin: 50px;
+}

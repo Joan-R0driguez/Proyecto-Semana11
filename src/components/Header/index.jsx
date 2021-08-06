@@ -1,10 +1,19 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/pngwing.com.png'
 import './styles.css';
 
 export default function Header () {
+
+    const [show, setShow] = useState(false);
+
+    useEffect(window.onscroll = () => {
+        setShow(window.pageYOffset === 0 ? false : true);
+        return () => window.onscroll = null;
+    }, [])
+    
     return(
-        <header>
+        <header className={show ? "sticky" : "Header"}>
             <section className="Header-logo">
                 <Link to="/">
                     <img src={Logo} alt="Logo"/>

@@ -1,0 +1,9 @@
+.country-grid-single{
+    width: 50%;
+    max-width: 330px;
+    margin: 40px auto;
+    border-radius: 20px;
+    background-color: #4f7c91;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}

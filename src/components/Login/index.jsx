@@ -7,11 +7,11 @@ export default function Login () {
             <form>
                 <p>
                     <label>Usuario</label>
-                    <input type="text" />
+                    <input type="text" required/>
                 </p>
                 <p>
                     <label>Contraseña</label>
-                    <input type="password" />
+                    <input type="password" required/>
                 </p>
                 <p><button>Ingresar</button>
                 </p>

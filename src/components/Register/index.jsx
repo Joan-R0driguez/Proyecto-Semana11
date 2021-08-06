@@ -7,15 +7,15 @@ export default function Register () {
             <form className="formulario">
                 <p>
                     <label>Usuario</label>
-                    <input type="text" />
+                    <input type="text" required/>
                 </p>
                 <p>
                     <label>Correo</label>
-                    <input type="email" />
+                    <input type="email" required/>
                 </p>
                 <p>
                     <label>Contraseña</label>
-                    <input type="password" />
+                    <input type="password" required/>
                 </p>
                 
                 <p><button>Enviar</button>

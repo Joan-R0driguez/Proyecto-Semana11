@@ -1,0 +1,33 @@
+.item-detail{
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    width: 70%;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: lightgreen;
+    align-items: center;
+}
+
+.item-detail img{
+    width: 95%;
+    max-width: 400px;
+}
+
+.item-detail h3{
+    font-size: 1rem;
+    padding: 3px;
+}
+
+@media (max-width: 660px){
+    .item-detail{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-detail img{
+        margin: 0 auto;
+    }
+}
