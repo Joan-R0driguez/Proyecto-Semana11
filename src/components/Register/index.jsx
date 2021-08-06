@@ -1,26 +1,66 @@
+import * as Yup from 'yup'
+import { useFormik } from 'formik';
+import { Form } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 export default function Register () {
+
+    const formik = useFormik({
+        initialValues: {
+            user:"",
+            email:"",
+            password:""
+        },
+        validationSchema: Yup.object({
+            user: Yup.string().required("El usuario es obligatorio"),
+            email: Yup.string().email("No es un email valido").required("El correo es obligatorio"),
+            password: Yup.string().required("La contraseña es obligatoria")
+        }),
+        onSubmit: (formData) => {
+            console.log(formData);
+        },
+    })
+
     return(
         <div className="register-container">
-            <h2>Registrate</h2>
-            <form className="formulario">
+            <h2>Registrarse</h2>
+            <Form onSubmit={formik.handleSubmit}>
                 <p>
                     <label>Usuario</label>
-                    <input type="text" required/>
+                    <Form.Input
+                        id="userName"
+                        onChange={formik.handleChange}
+                        error={formik.errors.user}
+                        type="text" 
+                        name="user" 
+                    />
                 </p>
                 <p>
                     <label>Correo</label>
-                    <input type="email" required/>
+                    <Form.Input
+                        onChange={formik.handleChange}
+                        error={formik.errors.email}
+                        type="text" 
+                        name="email" 
+                    />
                 </p>
                 <p>
                     <label>Contraseña</label>
-                    <input type="password" required/>
+                    <Form.Input
+                        id="userPass"
+                        onChange={formik.handleChange}
+                        error={formik.errors.password}
+                        type="password" 
+                        name="password" 
+                    />
                 </p>
-                
-                <p><button>Enviar</button>
+                <p className="button">
+                        <Link to="/home">
+                            <button type="submit">Ingresar</button>
+                        </Link>
                 </p>
-            </form>
+            </Form>
         </div>
     )
-}
+} 

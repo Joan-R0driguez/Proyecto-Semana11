@@ -3,14 +3,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 12% 0;
+    margin: 5% 0 8%;
 }
 
-.mapamundi{
-    width: 50%;
-    margin: 50px;
-    min-width: 260px;
-}
 
 .search-container h3{
     font-size: 100%;

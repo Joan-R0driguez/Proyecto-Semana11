@@ -10,6 +10,7 @@ import DetailPage from './views/DetailPage';
 import Footer from './components/Footer';
 import SearchResults from './components/SearchResults';
 import ListCountries from './views/ListCountries';
+import TablePage from './views/TablePage'
 
 export default function App () {
 
@@ -18,6 +19,9 @@ export default function App () {
         <Router>
           <Header />
           <Switch>
+          <Route path="/tablepage">
+              <TablePage />
+            </Route>
             <Route path="/countries">
               <ListCountries />
             </Route>
@@ -33,11 +37,11 @@ export default function App () {
             <Route path="/aboutus">
               <AboutUsPage />
             </Route>
+            <Route path="/home">
+              <HomePage />
+            </Route>
             <Route path="/register">
               <RegisterPage />
-            </Route>
-            <Route path="/homepage">
-              <HomePage />
             </Route>
             <Route path="/">
               <LoginPage />

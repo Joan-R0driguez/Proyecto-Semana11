@@ -32,6 +32,7 @@ footer span{
 @media (max-width: 350px){
     footer{
         flex-direction: column;
+        padding: 14px;
     }
 
     footer span{

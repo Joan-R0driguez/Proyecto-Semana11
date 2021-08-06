@@ -15,7 +15,7 @@ export default function Header () {
     return(
         <header className={show ? "sticky" : "Header"}>
             <section className="Header-logo">
-                <Link to="/homepage">
+                <Link to="/home">
                     <img src={Logo} alt="Logo"/>
                 </Link>
                 <h3>GlobalWiki</h3>

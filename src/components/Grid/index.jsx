@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import GridItem from '../GridItem'
+import Search from '../Search';
 import './styles.css'
 
 function Grid() {
@@ -20,6 +22,11 @@ function Grid() {
     }, [])
 
     return paises.length === 0 ? <h1 className="loading">Loading...</h1> : (
+        <>
+            <Search />
+            <Link to="/tablepage">
+                <h1 className="table-link">Vista de tabla aqui</h1>
+            </Link>
             <section className="country-grid">
                 {paises.map( (pais) => {
                     return(
@@ -27,6 +34,10 @@ function Grid() {
                     )
                 })}
             </section>
+            
+        </>
+
+            
     )
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import GridItem from '../GridItem';
+import Search from '../Search';
 import './styles.css'
 
 function SearchResults() {
@@ -21,16 +22,20 @@ function SearchResults() {
             });
         }, 1500)
         
-    }, [])
+    }, [paises])
 
     return paises.length === 0 ? <h1 className="loading">Loading...</h1> : (
-        <section className={paises.length === 1 ? "country-grid-single" : "country-grid"}>
-            {paises.map( (pais) => {
-                return(
-                    <GridItem pais={pais}/>
-                )
-            })}
-        </section>
+        <>
+            <Search />
+            <section className={paises.length === 1 ? "country-grid-single" : "country-grid"}>
+                {paises.map( (pais) => {
+                    return(
+                        <GridItem pais={pais}/>
+                    )
+                })}
+            </section>
+        </>
+        
 )
 }
 

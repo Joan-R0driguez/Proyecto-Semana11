@@ -1,13 +1,13 @@
 import {Link} from 'react-router-dom'
 import * as Yup from 'yup'
 import { useFormik } from 'formik';
-import { Form, Button } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 import './styles.css';
 
 export default function Login () {
 
     const nombre = "joan"
-    const contraseña = "ndeah"
+    const contraseña = "12345"
 
     const formik = useFormik({
         initialValues: {
@@ -19,7 +19,6 @@ export default function Login () {
             password: Yup.string().required("La contraseña es obligatoria")
         }),
         onSubmit: (formData) => {
-            /* handleLogin(formData); */
             console.log(formData);
         },
     })
@@ -48,7 +47,7 @@ export default function Login () {
                 </p>
                 <p className="button">
                     {nombre === formik.values.name && contraseña === formik.values.password ? (
-                        <Link to="/homepage">
+                        <Link to="/home">
                             <button type="submit">Ingresar</button>
                         </Link> 
                     ) : (

@@ -1,0 +1,15 @@
+table{
+    border: 1px solid black;
+    width: 95%;
+    margin: 30px auto;
+}
+
+thead{
+    font-size: 22px;
+}
+
+td{
+    padding: 2px;
+    border: 1px solid lightgreen;
+    font-size: 18px;
+}
